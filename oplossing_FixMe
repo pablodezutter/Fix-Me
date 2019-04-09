@@ -1,3 +1,7 @@
-var textBox = getDocumentById ("greetingsbox').value;
-var greetingsBox=getDocumentsByTagName ("h3");
-greetingsBox.innerHTML=textBox;
+var textBox = querySelector ("#greetingsBox');
+var greetingsBox=querySelector ("");
+greetingsBox.textContent=textBox;
+
+textBox.value=greetingsBox.textContent
+onkeyup
+

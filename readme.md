@@ -7,5 +7,7 @@ bestanden maken
 in repo zetten
 html en css kopiëren
 
+#Dinsdag 9 April
 
- 
+ <!-- the typed text needs to come in the div -->
+samen met Fred bekeken: addeventslistener toevoegen

@@ -50,6 +50,26 @@
         </div>
         <script>
             // Write your code here
+          var textIn= document.querySelector("#greetingsBox");
+          var textOut= document.querySelector(".greetingsBoxHolder");
+          var messageBox=textOut.firstElementChild;
+          
+         console.log(messageBox);
+         textIn.addEventListener("input", function(){
+            messageBox.innerText=textIn.value;
+
+
+         });
+
+
+
+               
+
+
+    
+
+
+
         </script>
     </div>
     <!-- END OF Part 1 -->
