@@ -57,18 +57,13 @@
          //console.log(messageBox);
          
          textIn.addEventListener("input", function(){
-            if (textIn !==""){
-                     messageBox.innerHTML=textIn.value;
+            if (textIn.value ==""){
+                messageBox.textContent= "sorry nothing to show"; 
                  }else {
-                     messageBox.innerText= "sorry nothing to show";   
-                        }      
-                 });
-         
-       
-
-               
-
-
+                    messageBox.textContent=textIn.value;
+                       
+                    }      
+                 });  
     
 
 
