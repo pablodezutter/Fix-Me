@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="mystyle.css">
 
 </head>
 <body class="bg-dark pt-4">
@@ -54,21 +54,17 @@
           var textOut= document.querySelector(".greetingsBoxHolder");
           var messageBox=textOut.firstElementChild;
           
-         console.log(messageBox);
+         //console.log(messageBox);
          
          textIn.addEventListener("input", function(){
-            if
-         
-            messageBox.innerText=textIn.value;
+            if (textIn !==""){
+                     messageBox.innerHTML=textIn.value;
+                 }else {
+                     messageBox.innerText= "sorry nothing to show";   
+                        }      
                  });
-        
-            // function checkForMessage(){
-            // if(textIn.value == ""){
-            //     console.log("check");
-            //         messageBox.innerText=("sorry, nothing to show");
-
-            //     };            
-            // }
+         
+       
 
                
 

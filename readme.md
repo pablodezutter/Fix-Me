@@ -11,3 +11,4 @@ html en css kopiëren
 
  <!-- the typed text needs to come in the div -->
 samen met Fred bekeken: addeventslistener toevoegen
+if else creeëren
