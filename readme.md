@@ -14,3 +14,14 @@ samen met Fred bekeken: addeventslistener toevoegen
 if else creeëren
 input heeft een value
 textContent is beter dan innerHTML
+
+#Woensdag 10 April
+oefening 1 afwerken
+sorry nothing to show komt niet op scherm !! value & textContent 
+
+
+#Donderdag 11 APril
+functie keyCode werkt niet, opnieuw gestart
+variables eerst opmaken
+Fred's hint: clone table, maar dat gaf problemen om de waarden later toe te voegen
+Raf's hint: nieuwe variables bij functie houden als ze niet algemeen nodig zijn, gebruik forEach uitgelegd()voert de meegegeven functie 1 keer uit voor elk array element.)

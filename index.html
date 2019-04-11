@@ -102,29 +102,50 @@
                     <td><input type="text" id="name" class="form-control" placeholder="Fill in your name"></td>
                     <td><input type="text" id="pizza" class="form-control" placeholder="Fill in your pizza choice"></td>
                     <td><input type="text" id="size" class="form-control" placeholder="Fill in your chosen size"></td>
-                    <td><input type="text" id="remarks" class="form-control" placeholder="Fill in your remarks"></td>
+                    <td><input type="text" id="remarks" class="form-control" placeholder=" Fill in your remarks"></td>
                 </tr>
                 </tbody>
             </table>
         </div>
         <script>
             // Write your code here
-            var checkCellen = ["#name", "#pizza", "#size"];
-            var inhoudOudCellen = checkCellen.value
-            var oldTable = document.querySelector("#emptyRow");
-            var newCell1 = oldtable.insertCell (0);
-            var newCell2 = oldtable.insertCell (1);
-            var newCell3 = oldtable.inserCell  (3);
+            //var checkCellen = ["#name", "#pizza", "#size"]; lijstje in geheugen
+            var pizzaTable = document.querySelector ("#pizzaOrders");
+            var emptyRow = document.querySelector("#emptyRow");
+            var inputFields = emptyRow.querySelectorAll("input");
+            //variable = all elements of input 
+            var newRow = emptyRow.cloneNode(true);
+            // pizzaTable.appendChild(newRow);
+
+            // var newCell1 = oldtable.insertCell (0);
+            // var newCell2 = oldtable.insertCell (1);
+            // var newCell3 = oldtable.inserCell  (2);
                 
-            checkCellen.addEventListener("keydown", function(event){
-
-             
-
-
-
-
-
-
+            emptyRow.addEventListener("keydown", function(event){
+                    if(event.keyCode === 13) {
+                        //als er op enter gedrukt wordt
+                        if (emptyRow.querySelector("#name").value==""|| emptyRow.querySelector("#pizza").value==""
+                        || emptyRow.querySelector("#size").value=="") 
+                        {  alert ("fout");
+                        return;
+                        }
+                     var additionalRow=document.createElement("tr");
+                      inputFields.forEach(function(field){
+                       // console.log(field.value); 1 veld wordt bekeken
+                            //voor elk van de velden
+                     var newCell = document.createElement("td");
+                              //maak een nieuwe cel
+                            newCell.innerText=field.value;
+                              //zet de waarde in de cel
+                              field.value ="";
+                              //maak veld leeg
+                            additionalRow.appendChild(newCell);
+                              //voeg de cel toe aan de nieuwe rij                
+                      });
+                      pizzaTable.appendChild(additionalRow);
+                            //voeg de rij toe aan de tabel
+                        }
+                    });               
 
         </script>
     </div>
@@ -155,6 +176,35 @@
         </div>
         <script>
             // Write your code here
+
+            var ingredients = document.querySelectorAll("#listHolder span");
+            var tekstInput=document.querySelector("#listHolder");
+            var btn=document.querySelector("button");
+
+            //If you click the button
+            btn.addEventListener("click",function changeList(){
+                             //create an new li
+                
+             
+                var newList= tekstInput.createElement ("LI");
+                var textList=create.textNode("ingredients");
+                newList.appendChild(textList);
+                tekstInput.append (newList);         
+               
+
+
+
+
+
+
+
+            });
+
+
+
+
+
+
         </script>
     </div>
     <!-- END OF Part 3 -->
