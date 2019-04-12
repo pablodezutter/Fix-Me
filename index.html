@@ -192,48 +192,53 @@
             var newList= document.querySelector("#listHolder");
             console.log (newList);
             var ul = document.createElement ("ul");
-            console.log(ul);   
-            var text =""      
+            console.log(ul);         
             
             //put the ul element inside the listholder
             newList.appendChild(ul);
             //put ingredients in the li, zet een loop errond
+            var li = document.createElement("li");
             for (var i =0; i< ingredients.length; i++){
-                
                 //create an li element
-             var li = document.createElement("li");
+                
                 //li aan lijst hangen
                 li.append (ingredients[i].innerText);
                                 
                 //li (die volstaat met info) aan ul hangen
                 ul.appendChild(li);
 
-
-                 //verwijder originele tekst
-
-                 btn.addEventListener("click",replaceText);
-
-                function replaceText (){
-                ingredients.textContent.style.visibility ="hidden";
+                if (var i =3){break};
+                document.write("Variabele i: " + i + "<br />");
                 }
 
 
-            
+                 //verwijder originele tekst
 
-               
-            
+                //  btn.addEventListener("click",replaceText);
 
-                  
-              
-                //verwijder addEventsListener
+                // function replaceText (){
+                // ingredients.style.visibility ="hidden";
+                // } 
+
+             
+
+
+
+
+
+
+
+
+                    //verwijder addEventsListener
+
+
+
+
+
+
 
                 }  
-         
-
-
-
-            }
-
+            
           
 
 
