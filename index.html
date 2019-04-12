@@ -176,29 +176,36 @@
         </div>
         <script>
             // Write your code here
+            
+            var btn
 
+            function clickBtn(){
             var ingredients = document.querySelectorAll("#listHolder span");
-            var tekstInput=document.querySelector("#listHolder");
-            var btn=document.querySelector("button");
+            console.log (ingredients);
 
-            //If you click the button
-            btn.addEventListener("click",function changeList(){
-                             //create an new li
-                
-             
-                var newList= tekstInput.createElement ("LI");
-                var textList=create.textNode("ingredients");
-                newList.appendChild(textList);
-                tekstInput.append (newList);         
-               
+            //create an ul element
+            var newList= document.querySelector("#listHolder");
+            console.log (newList);
+            var ul = document.createElement ("ul");
+            console.log(ul);         
+            
+            //put the ul element inside the listholder
+            newList.appendChild(ul);
+            //put ingredients in the li, zet een loop errond
+            for (var i =0; i< ingredients.length; i++){
+                //create an li element
+             var li = document.createElement("li");
+                //li aan lijst hangen
+                li.append (ingredients[i].innerText);
+                //li (die volstaat met info) aan ul hangen
+                ul.appendChild(li);
+            
+                }
+            }
+
+          
 
 
-
-
-
-
-
-            });
 
 
 
