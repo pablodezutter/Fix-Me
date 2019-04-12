@@ -177,7 +177,12 @@
         <script>
             // Write your code here
             
-            var btn
+               
+            
+            var btn= document.querySelector("#launchMe");
+            btn.addEventListener("click",clickBtn);
+
+
 
             function clickBtn(){
             var ingredients = document.querySelectorAll("#listHolder span");
@@ -187,20 +192,46 @@
             var newList= document.querySelector("#listHolder");
             console.log (newList);
             var ul = document.createElement ("ul");
-            console.log(ul);         
+            console.log(ul);   
+            var text =""      
             
             //put the ul element inside the listholder
             newList.appendChild(ul);
             //put ingredients in the li, zet een loop errond
             for (var i =0; i< ingredients.length; i++){
+                
                 //create an li element
              var li = document.createElement("li");
                 //li aan lijst hangen
                 li.append (ingredients[i].innerText);
+                                
                 //li (die volstaat met info) aan ul hangen
                 ul.appendChild(li);
-            
+
+
+                 //verwijder originele tekst
+
+                 btn.addEventListener("click",replaceText);
+
+                function replaceText (){
+                ingredients.textContent.style.visibility ="hidden";
                 }
+
+
+            
+
+               
+            
+
+                  
+              
+                //verwijder addEventsListener
+
+                }  
+         
+
+
+
             }
 
           
