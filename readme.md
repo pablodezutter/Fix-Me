@@ -31,3 +31,12 @@ var schrijven voor de benodigde elementen
 
 ! altijd eerst je elementen volstoppen met informatie dan pas append! 
 var's en functies stap per stap schrijven - veel consol.log
+
+#Dinsdag 23 April
+
+remove last list item with removeChildNode[3]
+
+#Woensdag 24 April
+
+(my birthday)
+learned a lot of basics on Codecademy, trying to implement some stuff.
