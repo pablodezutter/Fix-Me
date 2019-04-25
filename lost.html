@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fix me!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+    <link rel="stylesheet" href="mystyle.css">
+
+</head>
+<body class="bg-dark pt-4">
+<div id="exercisesHolder" class="container">
+
+
+
+
+<!-- Part 3: Element alterations -->
+<div class="row">
+    <div class="col-12 bg-white shadow-sm p-4 mx-auto mt-4">
+        <h3>Part 3: Element alterations</h3>
+        <p class="explanation">Here is what you need to do, below me is a list:
+        <ul>
+            <li>Fix it up so that it is an actual HTML list</li>
+            <li>Make it so the user can type what he / she wants in the final option</li>
+            <li>Launch the above transformation once the button (#launchMe) is pushed</li>
+            <li class="bonus">"Choose your final ingredient" should be placed as placeholder text in the input when it's empty</li>
+            <li class="bonus">When you go away from the input (click somewhere else), if the input is not empty, it should change into a regular LI item with the content of the input</li>
+        </ul>
+        </p>
+        <hr>
+        <br>
+        <button id="launchMe" class="btn btn-success play-button"><i class="fa fa-play"></i></button>
+        <p id="listHolder">This is what you need to make delicious spaghetti:
+            <span>Pasta</span><span>Tomato Sauce</span><span>Cheese</span><span>Choose your final ingredient</span></p>
+
+        <br>
+        <br>
+
+    </div>
+    <script>
+
+var clickBtn = document.getElementById ("launchMe");
+var ingredients = document.getElementsByTagName('span')
+
+let array=Array.from(ingredients);
+console.log(array);
+
+clickBtn.addEventListener("click",buttonClick);
+function buttonClick(){
+
+    let ul = document.createElement('ul');
+
+document.getElementById('listHolder').appendChild(ul);
+
+    array.forEach(function (array) {
+        var li = document.createElement('li');
+        ul.appendChild(li);
+
+        li.innerHTML += array.innerText;
+
+let newInput=document.createElement('input');
+array.appendChild (newInput);
+      
+    });
+
+}
+
+
+
+
+   
+
+
+</script>
+</body>
+
+</html>

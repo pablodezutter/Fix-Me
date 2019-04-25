@@ -176,68 +176,67 @@
         </div>
         <script>
             // Write your code here
-            var labelVar= document.getElementById("#listHolder");
-           var newLabel= document.createElement("INPUT");
-           newLabel.setAttribute=('type','text');
-           newLabel.setAttribute=('value','');
-           labelVar.appendChild(newLabel);
+        //     var labelVar= document.getElementById("#listHolder");
+        //    var newLabel= document.createElement("INPUT");
+        //    newLabel.setAttribute=('type','text');
+        //    newLabel.setAttribute=('value','');
+        //    labelVar.appendChild(newLabel);
+        //    newLabel.textContent='type here'
            
-        //     var btn= document.querySelector("#launchMe");
-        //     btn.addEventListener("click",clickBtn);
+            var btn= document.querySelector("#launchMe");
+            btn.addEventListener("click",clickBtn);
 
 
 
-        //     function clickBtn(){
-        //     var ingredients = document.querySelectorAll("#listHolder span");
-        //     console.log (ingredients);
+            function clickBtn(){
+            var ingredients = document.querySelectorAll("#listHolder span");
+            console.log (ingredients);
 
        
 
-        //     //create an ul element
-        //     var newList= document.querySelector("#listHolder");
-        //     console.log (newList);
-        //     var ul = document.createElement ("ul");
-        //     console.log(ul);         
+            //create an ul element
+            var newList= document.querySelector("#listHolder");
+            console.log (newList);
+            var ul = document.createElement ("ul");
+            console.log(ul);         
             
-        //     //put the ul element inside the listholder
-        //     newList.appendChild(ul);
-        //     //put ingredients in the li, zet een loop errond
-        //     for (var i=0; i< ingredients.length; i++){
-        //         //create an li element
-        //         var li = document.createElement("li");
-        //         //li aan lijst hangen
-        //         li.append (ingredients[i].innerText);
+            //put the ul element inside the listholder
+            newList.appendChild(ul);
+            //put ingredients in the li, zet een loop errond
+            for (var i=0; i< ingredients.length; i++){
+                //create an li element
+                var li = document.createElement("li");
+                //li aan lijst hangen
+                li.append (ingredients[i].innerText);
                                 
-        //         //li (die volstaat met info) aan ul hangen
-        //         ul.appendChild(li);
+                //li (die volstaat met info) aan ul hangen
+                ul.appendChild(li);
 
-        //     //    if (var i==3){break};
-        //     //     document.write("Variabele i: " + i + "<br />");
-        //         } 
+            //    if (var i==3){break};
+            //     document.write("Variabele i: " + i + "<br />");
+                } 
 
 
-        //     //     // verwijder originele tekst
+            //     // verwijder originele tekst
 
-        //     // btn.addEventListener("click",replaceText);
+            // btn.addEventListener("click",replaceText);
             
-        //     function replaceText(){
-        //    //delete span text
-        //         document..style.display="none";
+            function replaceText(){
+           //delete span text
+                document.style.display="none";
 
 
-        //     //delete last element in row
-        //          ul.removeChild(ingredients.childNodes[3]);
-        //     var inputfield= ingredients.appendChild(createInput);
-        //     console.log(4);
-        //     var createInput= document.createElement("input");
-        //     createInput.setAttribute("type", "text");
-        //     createInput.setAttribute("value","");
-        //     inputfield.appendChild(createInput);
-        //     }
+            //delete last element in row
+                ul.removeChild(ingredients.childNodes[3]);
+            var inputfield= ingredients.appendChild(createInput);
+            console.log(4);
+            var createInput= document.createElement("input");
+            createInput.setAttribute("type", "text");
+            createInput.setAttribute("value","");
+            inputfield.appendChild(createInput);
+            }
                
-
-
-          //      }
+               }
              
 
 
